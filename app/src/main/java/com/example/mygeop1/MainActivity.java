@@ -3,6 +3,8 @@ package com.example.mygeop1;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -16,17 +18,26 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.mygeop1.databinding.ActivityMainBinding;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
-
+    private String[] mas1;
+    private ArrayAdapter<String> aad;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        ListView lm1=findViewById(R.id.ListV1);
+        mas1=getResources().getStringArray(R.array.pandt);
+        aad=new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,new ArrayList<String>(Arrays.asList(mas1)));
+        lm1.setAdapter(aad);
+
 
         setSupportActionBar(binding.appBarMain.toolbar);
 

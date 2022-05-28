@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string-array name="pandt">
+        <item>Признаки параллелограмма</item>
+        <item>Свойства параллелограмма</item>
+        <item>Все площадии</item>
+        <item>Признаки трапеци</item>
+        <item>Свойства трапеции</item>
+        <item>Все площади</item>
+
+    </string-array>
+    <string-array name="triangles">
+        <item>Свойства треугольника</item>
+        <item>Прямоугольный треугольник</item>
+        <item>Равносторонний и равнобедренный</item>
+        <item>Все площади</item>
+
+
+    </string-array>
+
+</resources>
