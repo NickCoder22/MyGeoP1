@@ -1,6 +1,7 @@
 package com.example.mygeop1;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.widget.ArrayAdapter;
@@ -9,6 +10,8 @@ import android.widget.ListView;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.NonNull;
+import androidx.core.view.GravityCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -62,4 +65,23 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+    public boolean onNavigationItemSelected( MenuItem item){
+        int id=item.getItemId();
+        if (id==R.id.nav_slideshow){
+            mas1=getResources().getStringArray(R.array.triangles);
+            aad.clear();
+            aad.addAll(mas1);
+            aad.notifyDataSetChanged();
+
+        }
+        DrawerLayout drawer=findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+
+
+
+    }
+
+
 }
