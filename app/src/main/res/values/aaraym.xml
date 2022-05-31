@@ -4,12 +4,13 @@
 
 
     <string-array name="pandt">
-        <item>Признаки параллелограмма</item>
         <item>Свойства параллелограмма</item>
-        <item>Все площадии</item>
-        <item>Признаки трапеци</item>
+        <item>Признаки параллелограмма</item>
+        <item>Нахождение  площади</item>
+        <item>Признаки трапеции</item>
         <item>Свойства трапеции</item>
-        <item>Все площади</item>
+
+
 
     </string-array>
     <string-array name="triangles">
